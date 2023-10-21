@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <div align="center">
+      <h1 id="time"></h1>
+      <h2> 如果没有跳转 <a href="https://david-deng-01.gitee.io/my-blog/">点击这里</a> 手动跳转 </h2>
+    </div>
+  </body>
+  <script type="text/javascript">
+    let time = 3; // 倒计时多少秒
+    document.getElementById("time").innerHTML = time + " 秒后跳转到 David的博客 - (gitee.com)";
+    let intervalTimer = setInterval(() => {
+      if (time == 1) {
+        clearInterval(intervalTimer);
+        window.location.href = "https://david-deng-01.gitee.io/my-blog/";
+      }
+      document.getElementById("time").innerHTML = time + " 秒后跳转到 David的博客 - (gitee.com)";
+      time--;
+    }, 1000);
+  </script>
+</html>
